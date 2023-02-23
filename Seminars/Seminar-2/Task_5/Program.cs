@@ -1,22 +1,27 @@
-﻿//Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число 
-// квадратом другого.
+﻿//Задача 13: Напишите программу, которая выводит третью цифру заданного числа
+//или сообщает, что третьей цифры нет.
 
-Console.Write("Введите первое число: ");
-int a = int.Parse(Console.ReadLine());
+int index = 0;
 
-Console.Write("Введите второе число: ");
-int b = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите чило: ");
+int number = int.Parse(Console.ReadLine());
+int digits = number.ToString().Length;
 
-if (a * a == b)
-{
-    Console.WriteLine("Число b является квадратом числа a");
-}
-else if (b * b == a)
-{
-    Console.WriteLine("Число a является квадратом числа b");
-}
+if (digits > 3)
+    {
+        while (index < digits - 3)
+        {
+            number = number / 10;
+            index++;
+        }
+        number = number % 10;
+        Console.WriteLine(number);
+    }
+else if (digits == 3)
+    {
+        Console.WriteLine(number % 10);
+    }
 else
-{
-    Console.WriteLine("Числа не являются квадратами друг для друга");
-}
-
+    {
+        Console.WriteLine("Введенное число является 2-х значным");
+    }
