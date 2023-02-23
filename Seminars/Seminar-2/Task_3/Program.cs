@@ -9,9 +9,6 @@ double a = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите второе число:");
 double b = int.Parse(Console.ReadLine());
 
-//double result = b / a;
-
-//Console.WriteLine(b % a);
 if (a % b == 0)
  {
      System.Console.WriteLine("Второе число кратно первому.");
