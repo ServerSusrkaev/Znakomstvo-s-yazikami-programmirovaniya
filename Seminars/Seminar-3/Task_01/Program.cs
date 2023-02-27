@@ -1,4 +1,7 @@
-﻿Console.WriteLine("Укажите размерность массива");
+﻿//Задача 1.
+// Перемешивание элементов массива
+
+Console.WriteLine("Укажите размерность массива");
 int arrayLength = int.Parse(Console.ReadLine());
 int[] array = new int[arrayLength];
 int index = 0;
