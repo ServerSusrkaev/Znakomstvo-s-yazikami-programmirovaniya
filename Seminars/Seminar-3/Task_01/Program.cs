@@ -1,15 +1,25 @@
-﻿// Задача 1.
-// Реализуйте программу. Которая перемешивает элементы массива.
+﻿Console.WriteLine("Укажите размерность массива");
+int arrayLength = int.Parse(Console.ReadLine());
+int[] array = new int[arrayLength];
+int index = 0;
 
-// Задача 2
-// дан массив наполненный числами от 1 до N. Задача посчитать, какое число,
-// сколько раз встречается.
-// 1 3 1 2 1 2 4 5 1 2 5 4
+while (index < arrayLength)
+{
+    Console.Write("Введите элемент массива: ");
+    array[index] = int.Parse(Console.ReadLine());
+    index ++;
+}
 
-// 1 - 4р
-// 2 - 3р
-// 3 - 1р
-// 4 - 2р
-// 5 - 2р
-//-------------------------------------------------------------------------------------------
-Library.SayHello();
+int oldValue = 0;
+int newValue= 0;
+
+for (int i = 0; i < array.Length - 1; i++)
+{
+    newValue = new Random().Next(i + 1, 9);
+    
+    oldValue = array[i];
+    array[i] = array[newValue];
+    array[newValue] = oldValue;
+
+    Console.Write(array[i] + " ");
+}
