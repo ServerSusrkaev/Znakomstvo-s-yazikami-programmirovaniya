@@ -17,7 +17,7 @@ int newValue= 0;
 
 for (int i = 0; i < array.Length; i++)
 {
-    newValue = new Random().Next(i, array.Length + 1);
+    newValue = new Random().Next(i, array.Length);
     
     oldValue = array[i];
     array[i] = array[newValue];
